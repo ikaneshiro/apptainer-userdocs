@@ -62,7 +62,7 @@ below with their respective functionality.
    also PID, IPC, and environment. Default is set to false.
 
 #. **APPTAINER_CONTAINLIBS**: Used to specify a string of file names
-   (comma separated string) to bind to the ``/.apptainer.d/libs``
+   (comma separated string) to bind to the ``/.singularity.d/libs``
    directory.
 
 ``D``
@@ -908,7 +908,7 @@ currently residing in docker's daemon internal storage:
    REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
    alpine              latest              965ea09ff2eb        7 weeks ago         5.55MB
 
-   $ apptainer run docker-daemon:alpine:latest
+   $ singularity run docker-daemon:alpine:latest
    INFO:    Converting OCI blobs to SIF format
    INFO:    Starting build...
    Getting image source signatures
@@ -927,7 +927,7 @@ a docker image stored in a ``docker-save`` formatted tar file:
 
    $ docker save -o alpine.tar alpine:latest
 
-   $ apptainer run docker-archive:$(pwd)/alpine.tar
+   $ singularity run docker-archive:$(pwd)/alpine.tar
    INFO:    Converting OCI blobs to SIF format
    INFO:    Starting build...
    Getting image source signatures
